@@ -8,24 +8,29 @@ In this project a chatbot is created which offers a complete and easy way to ans
 
      The goal is to set up a remote connection between the customer and the company. 
 By this chatbot anyone can have their problem solved by posting queries to chatbot via being at home or without calling an employee.
-
+#  #
 Project Requirements:
 
    * IBM Cloud
    * IBM Watson services
    * Node Red
    * Web Framework
+#  #   
 Functional Requirements:
 
  * A Chatbot able to answer queries.
  * Redirect the operational queries to Owner's manual.
  * Redirect the query to the particular section of the owner's manual.
+ 
+#  #
 Technical Requirements:
 
  * Create a chatbot using Watson Assistant.
  * Use Watson Discovery to  redirect the user's query to the section of the owner's manual.
  * Use Node Red to wire together Api and online services.
  * Integrating it with IBM Cloud.
+ 
+#  #
 Software Requirements:
 
 * IBM watson services
@@ -36,19 +41,19 @@ Software Requirements:
 * User interface
 * Security
 * Json editor
+#  #
 Project Deliverables:
 
 The model created i.e. a chatbot would be able to identify any operational question posted by the user
 and using IBM Watson discovery will redirect the user to the  section of the owner's manual
 where the answer to the question lies.
-Flow
-architecture
+# architecture #
 
 What will you get to know here?
-How to create a skill using Watson Assistant.
+ *How to create a skill using Watson Assistant.
 
-How to create UI with node red flow (Chatbot).
+ *How to create UI with node red flow (Chatbot).
 
-How to create cloud function using IBM cloud.
+ *How to create cloud function using IBM cloud.
 
-How to connect Watson discovery to chatbot through Cloud funtcion.
+ *How to connect Watson discovery to chatbot through Cloud funtcion.
