@@ -48,12 +48,13 @@ The model created i.e. a chatbot would be able to identify any operational quest
 and using IBM Watson discovery will redirect the user to the  section of the owner's manual
 where the answer to the question lies.
 #  #
-Architecture
+Architecture:
+
 What will you get to know here?
- *How to create a skill using Watson Assistant.
+ * How to create a skill using Watson Assistant.
 
- *How to create UI with node red flow (Chatbot).
+ * How to create UI with node red flow (Chatbot).
 
- *How to create cloud function using IBM cloud.
+ * How to create cloud function using IBM cloud.
 
- *How to connect Watson discovery to chatbot through Cloud funtcion.
+ * How to connect Watson discovery to chatbot through Cloud funtcion.
