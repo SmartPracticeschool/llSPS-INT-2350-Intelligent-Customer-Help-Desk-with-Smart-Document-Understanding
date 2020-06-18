@@ -1,0 +1,280 @@
+[
+    {
+        "id": "f0920d0f.26faf",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ed8fb8af.d70158",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Customer Care Helpdesk",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9adf68c5.704348",
+        "type": "ui_group",
+        "z": "",
+        "name": "Chatbot",
+        "tab": "ed8fb8af.d70158",
+        "order": 1,
+        "disp": true,
+        "width": 13,
+        "collapse": false
+    },
+    {
+        "id": "b0268b6f.acbe58",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "32f23efd.2b2d12",
+        "type": "ui_form",
+        "z": "f0920d0f.26faf",
+        "name": "",
+        "label": "",
+        "group": "9adf68c5.704348",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Enter your input",
+                "value": "text",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "text": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 70,
+        "y": 1320,
+        "wires": [
+            [
+                "f962a6ba.c736e8"
+            ]
+        ]
+    },
+    {
+        "id": "f962a6ba.c736e8",
+        "type": "function",
+        "z": "f0920d0f.26faf",
+        "name": "Input",
+        "func": "msg.payload=msg.payload.text;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 1200,
+        "wires": [
+            [
+                "39564910.42a926",
+                "12abdd50.6df673"
+            ]
+        ]
+    },
+    {
+        "id": "1756739.5844a8c",
+        "type": "function",
+        "z": "f0920d0f.26faf",
+        "name": "",
+        "func": "msg.payload=msg.payload.output.text[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 1200,
+        "wires": [
+            [
+                "72889c77.4710a4",
+                "c03a2100.ae09b"
+            ]
+        ]
+    },
+    {
+        "id": "39564910.42a926",
+        "type": "ui_text",
+        "z": "f0920d0f.26faf",
+        "group": "9adf68c5.704348",
+        "order": 2,
+        "width": 13,
+        "height": 2,
+        "name": "",
+        "label": "You :",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "x": 370,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "c03a2100.ae09b",
+        "type": "debug",
+        "z": "f0920d0f.26faf",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 750,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "72889c77.4710a4",
+        "type": "ui_text",
+        "z": "f0920d0f.26faf",
+        "group": "9adf68c5.704348",
+        "order": 3,
+        "width": 13,
+        "height": 6,
+        "name": "",
+        "label": "Bot :",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 610,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "12abdd50.6df673",
+        "type": "watson-conversation-v1",
+        "z": "f0920d0f.26faf",
+        "name": "Customer Care",
+        "workspaceid": "194d02fd-1476-4ee9-addd-8cca983afaf0",
+        "multiuser": false,
+        "context": true,
+        "empty-payload": false,
+        "service-endpoint": "https://api.eu-gb.assistant.watson.cloud.ibm.com/instances/533cb655-812e-418a-a9ff-7acfcd5de96e",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 400,
+        "y": 1140,
+        "wires": [
+            [
+                "1756739.5844a8c"
+            ]
+        ]
+    },
+    {
+        "id": "55a1a351.6c690c",
+        "type": "inject",
+        "z": "f0920d0f.26faf",
+        "name": "",
+        "topic": "",
+        "payload": "Hi",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 1100,
+        "wires": [
+            [
+                "12abdd50.6df673"
+            ]
+        ]
+    }
+]
